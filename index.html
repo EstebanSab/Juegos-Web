@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body onload="iniciar()">
+    <div class="contenedor">
+        <header class="header">
+            <div>
+                <img class="icono-pagina" src="./Imagenes/04_Memoria_Cartas.png" alt="icono">
+            </div>
+            <div class="header-titulo">BanGames</div>
+        </header>
+
+        <div class="search">
+            <form action="" onsubmit="buscarJuego(event)">
+            <input onfocusout="vaciarResultados()" type="text" name="juegoBuscado" placeholder="Buscar Juegos" autocomplete="off" class="in-buscador">
+            <input type="submit" value="Buscar">
+            </form>
+        <div class="resultados-busqueda">
+
+        </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li class="nav-ul-inicio"><a href="">Inicio</a></li>
+                <li class="nav-ul-juegos"><a href="">Juegos</a></li>
+                <li class="nav-ul-contacto"><a href="#informacion-contacto">Contacto</a></li>            
+            </ul>
+        </nav>
+
+        <div class="muestreo-juegos">
+            <button role="button" class="flecha-izquierda" onclick="trasladarJuegos(-1)"> < </button>
+            <div class="contenedor-imagenes">
+                <div class="muestreo-juego-pos-1" onclick="elegirJuego(1)" >default</div>
+                <div class="muestreo-juego-pos-2" onclick="elegirJuego(2)" >default</div>
+                <div class="muestreo-juego-pos-3" onclick="elegirJuego(3)" >default</div>
+                <div class="muestreo-juego-pos-4" onclick="elegirJuego(4)" >default</div>
+            </div>
+            <button role="button" class="flecha-derecha" onclick="trasladarJuegos(1)">></i></button>
+        </div>
+
+        <div class="juego-completo">
+            <div class="juego-completo-bloquear" onclick="pantallaEstatica()">Bloquear Pantalla</div>
+            <div class="juego-elegido" onclick="pantallaEstatica()">
+            <iframe src="./Juegos/01_Tateti/index.html"  allow="fullscreen"></iframe>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <ul id="informacion-contacto" class="informacion-contacto">
+                <li><a target="_blank" href="https://www.linkedin.com/in/esteban-sabinio-330578213/">Linkedin</a></li>
+                <li><a href="">Enviar Mail</a></li>
+                <li><a href="">GitHub</a></li>
+            </ul>
+        </footer>
+    </div> 
+</body>
+</html>
